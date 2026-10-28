@@ -10,6 +10,13 @@ The analytical backend and interactive React dashboard are implemented. The dash
 market and date controls, decision context, accuracy metrics, forecast-versus-actual generation,
 daily bias, a buyer-facing interpretation, loading/error states, and data-quality coverage.
 
+## Live application
+
+- Dashboard: https://kvrn-analysis-web.vercel.app
+- API documentation: https://kvrn-analysis-api.vercel.app/docs
+- API health check: https://kvrn-analysis-api.vercel.app/health
+- Source repository: https://github.com/Malay5974/kvrn-analysis
+
 ## Decision model
 
 The default market profile is the EPEX hourly day-ahead auction. For each delivery day, the
@@ -29,6 +36,9 @@ bias means over-forecasting.
 - `frontend/src`: React dashboard, typed API integration, and analysis helpers
 - `frontend/src/components`: lazy-loaded charts and reusable dashboard components
 - `docker-compose.yml`: local full-stack runtime
+- `TESTING.md`: automated and manual end-to-end test guidance
+- `DEMO_SCRIPT.md`: timed customer demo and technical handover script
+- `SUBMISSION_CHECKLIST.md`: final assessment submission checklist
 
 ## Run with Docker
 
@@ -80,6 +90,13 @@ npm run build
 ```text
 GET /api/v1/analysis?delivery_from=2026-01-01&delivery_to=2026-01-31&market_profile=epex_hourly
 ```
+
+## Deployment
+
+The frontend and backend are deployed as separate Vercel projects. The frontend build receives
+the backend URL through `VITE_API_BASE_URL`, while the backend restricts browser access through
+the `CORS_ORIGINS` environment setting. The framework configuration is recorded in each
+application's `vercel.json`.
 
 ## Data source and attribution
 
