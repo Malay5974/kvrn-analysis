@@ -19,7 +19,7 @@
 
 ## Candidate actions required before submission
 
-- [ ] Record the two-part demo using `DEMO_SCRIPT.md`.
+- [ ] Record a two-part demo covering the customer pilot and technical handover.
 - [ ] Keep the complete video at or below 10 minutes.
 - [ ] Upload the video to YouTube with **Unlisted** visibility.
 - [ ] Open the YouTube URL in an incognito window and confirm playback works.

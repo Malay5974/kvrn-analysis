@@ -13,9 +13,9 @@ copy any relevant browser-console or server-log message into the Notes column.
 
 | Item | Value |
 |---|---|
-| Frontend | <http://127.0.0.1:5173> |
-| Backend health | <http://127.0.0.1:8000/health> |
-| API documentation | <http://127.0.0.1:8000/docs> |
+| Frontend | <https://kvrn-analysis-web.vercel.app> |
+| Backend health | <https://kvrn-analysis-api.vercel.app/health> |
+| API documentation | <https://kvrn-analysis-api.vercel.app/docs> |
 | Supported delivery period | 1–31 January 2026 |
 | Default market profile | EPEX hourly day-ahead |
 | Default decision cutoff | 09:20 Europe/London on D−1 |
@@ -31,7 +31,10 @@ Browser and version:
 Operating system:
 ```
 
-## Prerequisites
+## Optional local-development setup
+
+The acceptance tests below use the deployed Vercel environment. Start the local services only
+when validating local-development behavior or changes that have not yet been deployed.
 
 ### Start the backend
 
@@ -113,7 +116,7 @@ Display values may differ by one MW or 0.1 percentage points due to rounding.
 
 **Priority:** Critical
 
-1. Open <http://127.0.0.1:8000/health>.
+1. Open <https://kvrn-analysis-api.vercel.app/health>.
 
 Expected:
 
@@ -128,7 +131,7 @@ Expected:
 
 **Priority:** Critical
 
-1. Open <http://127.0.0.1:5173> in a fresh browser tab.
+1. Open <https://kvrn-analysis-web.vercel.app> in a fresh browser tab.
 2. Wait for the initial request to finish.
 
 Expected:
@@ -519,7 +522,7 @@ Expected:
 - One analysis request occurs per new applied filter.
 - No request loop occurs.
 - Response dates and market profile match the selected controls.
-- CORS allows `http://127.0.0.1:5173`.
+- CORS allows `https://kvrn-analysis-web.vercel.app`.
 
 | Result | Notes/evidence |
 |---|---|
@@ -527,7 +530,7 @@ Expected:
 
 ### TC-024 — API documentation
 
-1. Open <http://127.0.0.1:8000/docs>.
+1. Open <https://kvrn-analysis-api.vercel.app/docs>.
 2. Confirm the documented endpoints.
 3. Execute `/health`.
 

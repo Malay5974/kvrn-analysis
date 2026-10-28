@@ -37,18 +37,19 @@ bias means over-forecasting.
 - `frontend/src/components`: lazy-loaded charts and reusable dashboard components
 - `docker-compose.yml`: local full-stack runtime
 - `TESTING.md`: automated and manual end-to-end test guidance
-- `DEMO_SCRIPT.md`: timed customer demo and technical handover script
 - `SUBMISSION_CHECKLIST.md`: final assessment submission checklist
 
-## Run with Docker
+## Run locally with Docker
 
 ```bash
 docker compose up --build
 ```
 
-- Frontend: http://localhost:3000
-- API documentation: http://localhost:8000/docs
-- Health check: http://localhost:8000/health
+- Local frontend: http://localhost:3000
+- Local API documentation: http://localhost:8000/docs
+- Local health check: http://localhost:8000/health
+
+For the hosted production environment, use the Vercel links in [Live application](#live-application).
 
 ## Run the backend locally
 
